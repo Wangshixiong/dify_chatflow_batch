@@ -1,0 +1,26 @@
+# Chatflow 自动化测试工具依赖包
+
+# Excel文件处理
+pandas>=1.5.0
+openpyxl>=3.0.0
+
+# HTTP请求处理
+requests>=2.28.0
+
+# 配置文件解析
+configparser>=5.0.0
+
+# 命令行参数处理 (Python内置，无需安装)
+# argparse
+
+# 日志记录 (Python内置，无需安装)
+# logging
+
+# 时间处理 (Python内置，无需安装)
+# datetime
+
+# JSON处理 (Python内置，无需安装)
+# json
+
+# 系统路径处理 (Python内置，无需安装)
+# os, pathlib
