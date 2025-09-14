@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Bash(*)"
+    ],
+    "deny": [
+      "Bash(rm:*)",
+      "Bash(sudo:*)"
+    ],
+    "defaultMode": "bypassPermissions"
+  },
+  "enableAllProjectMcpServers": true
+}

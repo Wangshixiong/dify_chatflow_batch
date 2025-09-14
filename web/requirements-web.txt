@@ -1,0 +1,19 @@
+# Web界面后端依赖
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+pydantic==2.5.0
+cryptography>=41.0.0
+aiofiles==23.2.1
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# 不需要数据库依赖，使用文件存储
+
+# 文件处理 (复用现有)
+openpyxl==3.1.2
+pandas==2.1.4
+
+# 开发工具
+pytest==7.4.3
+pytest-asyncio==0.21.1

@@ -16,6 +16,7 @@ ENV/
 # IDE文件
 .vscode/
 .idea/
+.qoder/
 *.swp
 *.swo
 *~

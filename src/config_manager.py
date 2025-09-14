@@ -103,7 +103,7 @@ class ConfigManager:
     
     def get_response_mode(self) -> str:
         """获取响应模式"""
-        mode = self.config.get('API', 'RESPONSE_MODE', fallback='blocking').strip().lower()
+        mode = self.config.get('API', 'RESPONSE_MODE', fallback='streaming').strip().lower()
         if mode not in ['blocking', 'streaming']:
             raise ValueError("RESPONSE_MODE必须是'blocking'或'streaming'")
         return mode

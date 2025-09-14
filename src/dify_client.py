@@ -21,7 +21,7 @@ class DifyAPIError(Exception):
 class DifyClient:
     """Dify API客户端"""
     
-    def __init__(self, api_url: str, api_key: str, timeout: int = 30, response_mode: str = "blocking"):
+    def __init__(self, api_url: str, api_key: str, timeout: int = 30, response_mode: str = "streaming"):
         """
         初始化Dify客户端
         
@@ -29,7 +29,7 @@ class DifyClient:
             api_url: API基础URL
             api_key: API密钥
             timeout: 请求超时时间（秒）
-            response_mode: 响应模式（blocking或streaming）
+            response_mode: 响应模式（streaming）
         """
         self.api_url = api_url.rstrip('/')
         self.api_key = api_key
@@ -87,11 +87,7 @@ class DifyClient:
         start_time = time.time()
         
         try:
-            # 根据响应模式选择不同的处理方式
-            if self.response_mode == "streaming":
-                return self._handle_streaming_response(url, payload, start_time)
-            else:
-                return self._handle_blocking_response(url, payload, start_time)
+            return self._handle_streaming_response(url, payload, start_time)
             
         except requests.exceptions.Timeout:
             raise DifyAPIError(f"API请求超时（{self.timeout}秒）")
@@ -100,7 +96,7 @@ class DifyClient:
         except requests.exceptions.RequestException as e:
             raise DifyAPIError(f"API请求异常: {e}")
     
-    def _handle_blocking_response(self, url: str, payload: Dict[str, Any], start_time: float) -> Tuple[Dict[str, Any], float]:
+    def _handle_blocking_response_removed(self, url: str, payload: Dict[str, Any], start_time: float) -> Tuple[Dict[str, Any], float]:
         """
         处理阻塞模式的响应
         """
