@@ -232,7 +232,9 @@ cd web/frontend && npm install
 
 **制于**：贞观二十三年九月十四日（公元2025年9月14日）、
 
-**联系我**：![微信公众号](https://wenhua-image.oss-cn-beijing.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/wechat.jpg)
+**联系我**：<img src="https://wenhua-image.oss-cn-beijing.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/wechat.jpg" 
+     alt="微信二维码" 
+     style="width: 200px; display: block; margin: 20px auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
 >>>>>>> 8b720d1c70f43a84d756e454cdd0f24f427e1d18
 **博客**：[个人博客](https://www.qianshu.wang/)
